@@ -41,6 +41,7 @@ class UserController extends Controller
             'profile_photo' => 'required|image',
         ]);
 
+        //Run the command  php artisan storage::link
         $path = $request->file('profile_photo')->store('public/uploads');
 
         $data = new User;
