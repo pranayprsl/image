@@ -25,6 +25,8 @@ Route::Post('/store',[UserController::class,'store'])->name('store');
 
 Route::get('{user}/edit',[UserController::class,'edit'])->name('edit');
 
+Route::patch('/update/{id}',[UserController::class,'update'])->name('update');
+
 Route::get('{user}/show',[UserController::class,'show'])->name('show');
 
 Route::get('/{user}/delete',[UserController::class,'destroy'])->name('destroy');
